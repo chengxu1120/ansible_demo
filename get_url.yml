@@ -1,0 +1,6 @@
+---
+- hosts: demo_group
+  remote_user: root
+  tasks:
+   - name: get url
+     get_url: url=http://storage.jd.com/eicore-fm.jd.com/011001700111-71056687.pdf?Expires=2521073569&AccessKey=bfac05320eaf11cc80cf1823e4fb87d98523fc94&Signature=ufnCMKs4YI%2FbNt7svzEDRggdg4o%3D&utm_source=dmp&utm_medium=cpc&utm_campaign=dmp_155&utm_term=dmp_155_629239_d2516854973b3edc74386806d5994366e4d04f0_1527148978 dest=/tmp

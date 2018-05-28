@@ -1,0 +1,6 @@
+---
+- hosts: demo_group
+  remote_user: root
+  tasks:
+   - name: custom job
+     cron: name="cron_touch" minute=1 hour=* day=* month=* weekday=* job="echo hello >> /tmp/aaa"

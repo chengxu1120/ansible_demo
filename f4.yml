@@ -1,0 +1,8 @@
+---
+- hosts: sshkey
+  remote_user: root
+  tasks:
+   - name: sync file
+     synchronize:
+      src: /home/ubuntu/Desktop/ansible_demo/f3.yml 
+      dest: /tmp/

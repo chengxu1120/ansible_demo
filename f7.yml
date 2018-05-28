@@ -1,0 +1,9 @@
+---
+- hosts: sshkey
+  remote_user: root
+  tasks:
+   - name: unarchive file
+     unarchive:
+      src: /tmp/daxu.tar.gz
+      dest: /root/
+      remote_src: yes

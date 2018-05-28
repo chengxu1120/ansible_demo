@@ -1,0 +1,10 @@
+---
+- hosts: sshkey
+  remote_user: root
+  tasks:
+   - name: touch daxu
+     file: path=/tmp/daxu state=directory 
+   - name: tar 
+     unarchive:
+      src: ansible_demo.tar.gz
+      dest: /tmp/daxu

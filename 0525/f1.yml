@@ -1,0 +1,5 @@
+---
+- hosts: demo_group
+  tasks:
+   - name: touch file
+     shell: "touch /tmp/{{imooc}}"

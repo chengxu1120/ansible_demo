@@ -1,0 +1,6 @@
+---
+- hosts: demo_group
+  remote_user: root
+  tasks:
+   - name: fetch file
+     fetch: src=/tmp/login.txt dest=./

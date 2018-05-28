@@ -1,0 +1,8 @@
+---
+- hosts: sshkey
+  remote_user: root
+  tasks:
+   - name: jie ya
+     unarchive:
+       src: /tmp/abc.tar.gz
+       dest: /tmp/

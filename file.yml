@@ -1,0 +1,12 @@
+---
+- hosts: demo_group
+  remote_user: root
+  tasks:
+   - name: file copy
+     file: path=/tmp/xiaoming state=touch owner=root group=root mode=0777
+   - name: file copy1
+     file: path=/tmp/lisi state=directory 
+   - name: file copy2
+     file: src=/etc/ansible/ansible.cfg dest=/tmp/ansible.cfg state=link
+   - name: file hard
+     file: src=/etc/ansible/ansible.cfg dest=/tmp/ansib.cfg  state=hard

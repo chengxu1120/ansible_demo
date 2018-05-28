@@ -1,0 +1,11 @@
+---
+- hosts: sshkey
+  remote_user: root
+  tasks:
+   - name: file info
+     file:
+      path: /tmp/ansible11
+      state: directory 
+      owner: root
+      group: root
+      mode: 0600

@@ -1,0 +1,6 @@
+---
+- hosts: demo_group
+  remote_user: root
+  tasks:
+   - name: add user
+     user: name=david state=present shell=/bin/bash createhome=yes

@@ -1,0 +1,8 @@
+---
+- hosts: demo_group
+  remote_user: root
+  tasks:
+   - name: stop service
+     service:
+      name: nginx
+      state: stopped

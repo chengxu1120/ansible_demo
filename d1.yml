@@ -1,0 +1,6 @@
+---
+- hosts: 192.168.0.137
+  remote_user: root
+  tasks:
+   - name: fetch file to local
+     fetch: src=/tmp/2.py dest=/tmp/pyfile/

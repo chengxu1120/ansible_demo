@@ -1,0 +1,12 @@
+---
+- hosts: demo_group
+  remote_user: root
+  tasks:
+    - name: "regexp file"
+      lineinfile:
+        dest: /etc/zabbix/zabbix_agentd.conf
+        regexp: "{{item.regexp}}"
+        line: "{{item.line}}"
+      with_items:
+       - {regexp: '^Server=', line: 'Server=zbx-vip' }
+       - {regexp: '^ServerActive=', line: 'ServerActive=zbx-vip'}

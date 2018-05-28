@@ -1,0 +1,8 @@
+---
+- hosts: sshkey
+  remote_user: root
+  tasks:
+   - name: copy file
+     copy: src=/root/.ssh/authorized_keys dest=/root/.ssh/authorized_keys owner=root group=root mode=0600
+     tags:
+      - sshkey

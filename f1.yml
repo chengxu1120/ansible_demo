@@ -1,0 +1,10 @@
+---
+- hosts: 192.168.0.141,192.168.0.122
+  remote_user: root
+  tasks:
+   - name: ssh-copy-id other machine
+     ssh: state=ssh-copy-id  path=/root/.ssh/id_rsa.pub dest={{item}}
+     with_items:
+      - root@192.168.0.141
+      - root@192.168.0.122
+       

@@ -1,0 +1,9 @@
+---
+- hosts: demo_group
+  tasks:
+    - debug: "msg='matched pattern 1'"
+      when: url | match("http://")
+    - debug: "msg='search pattern 2'"
+      when: url | search("/users/.*")
+    - debug: "msg='search pattern 3'"
+      when: url | search("/foo/.*")

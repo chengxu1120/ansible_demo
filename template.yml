@@ -1,0 +1,6 @@
+---
+- hosts: demo_group
+  remote_user: root
+  tasks:
+   - name: template
+     template: src=/home/ubuntu/Desktop/login.txt dest=/tmp/ owner=root group=root mode=0600
